@@ -14,7 +14,7 @@ class VideoConfig:
     logo_path: Optional[str] = None
     audio_path: Optional[str] = None
     
-    # --- Các thuộc tính mới cho Preset ---
+    # --- Các thuộc tính  cho Preset ---
     zoom_factor: float = 1.0      # e.g., 1.2 for 20% zoom
     rotation_angle: float = 0.0   # in degrees
     overlay_opacity: float = 0.0  # 0.0 to 1.0
@@ -23,9 +23,9 @@ class VideoConfig:
 class YouTubeConfig:
     title: str = ""
     description: str = ""
-    tags: str = "" # Comma-separated
-    privacy_status: str = "private" # private, unlisted, public
-    schedule_datetime: Optional[str] = None # "DD/MM/YYYY HH:MM"
+    tags: str = "" 
+    privacy_status: str = "private" 
+    schedule_datetime: Optional[str] = None 
 
 class AppState:
     """A singleton class to hold the application's state."""
@@ -47,4 +47,5 @@ class AppState:
         self.cancel_requested = False
 
     def request_cancel(self):
+
         self.cancel_requested = True
