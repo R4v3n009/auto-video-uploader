@@ -95,9 +95,6 @@ class AutoVideoTool(QMainWindow):
         self._init_ui()
         self._apply_stylesheet()
 
-    # ==============================================================================
-    # >> HÀM _log ĐÃ ĐƯỢC DI CHUYỂN LÊN ĐÂY ĐỂ SỬA LỖI <<
-    # ==============================================================================
     def _log(self, message):
         if hasattr(self, 'log_textbox'):
             self.log_textbox.append(f"[{datetime.now().strftime('%H:%M:%S')}] {message}")
@@ -470,4 +467,5 @@ if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = AutoVideoTool()
     window.show()
+
     sys.exit(app.exec_())
