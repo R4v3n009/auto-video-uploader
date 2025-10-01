@@ -46,8 +46,7 @@ class VideoProcessor:
             if video_config.brightness != 1.0:
                 clip = clip.fx(vfx.colorx, video_config.brightness)
             
-            # ... Add contrast and saturation if needed, colorx can only do one at a time.
-            # For multiple color effects, a custom function with fl_image is better.
+       
 
             if progress_callback: progress_callback(50)
 
@@ -76,4 +75,5 @@ class VideoProcessor:
         except Exception as e:
             if 'clip' in locals() and clip:
                 clip.close()
+
             return (False, f"Video processing error: {str(e)}")
